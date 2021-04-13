@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizzer for Torts and Damages</title>
+    <link rel="stylesheet"  href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/quizzer.css" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="../../../docs/_assets/js/jqm-docs.js"></script> -->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/tdquizzer.js"></script>
+    <!-- <script type="text/javascript" language="javascript" src="qanda.js"></script> -->
+    <style id="footer-abs-buttons">
+      .footer-button-left,
+      .footer-button-right {
+        position: absolute;
+        margin: 0;
+        top: auto;
+        bottom: 0.24em;
+      }
+      .footer-button-left {
+        left: 0.4em;
+      }
+      .footer-button-right {
+        right: 0.4em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-role="page" id="quizzermain">
+      <div data-role="header" data-theme="a" data-position="fixed">
+        <a href="index.html" rel="external" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-refresh">Refresh</a>
+        <h1>Quizzer</h1>
+        <a href="#about" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-info">About</a>
+      </div><!-- /header -->
+      <div id="homeheader">
+        <img src="img/lawlogo2.png" />
+        <p><strong><h2>Torts and Damages</h2></strong></p>
+      </div>
+      <div data-role="content">
+        <ul id="tdtopics" data-role="listview" data-inset="true">
+	      <li data-role="list-divider">Topics</li>
+        </ul>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h1>&copy; 2020 Paparts</h1>
+      </div><!-- /footer -->
+
+      <!-- About Page -->
+      <div id="about" data-role="popup" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+        <div data-role="header" data-theme="a">
+          <h1>About Quizzer</h1>
+        </div>
+        <div data-role="content" data-theme="a">
+          <h3>Quizzer for Torts and Damages</h3>
+          <p>Ver. 2.01</p>
+          <h3>Description</h3>
+          <p>Some short description of the app. It should be four to six sentences long. Not long enough to fit on a popup window. Because we have a limited screen display of a smartphone. Enough to educate the user about this app so that they will know whether to use it or not.</p>
+          <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+            <div data-role="collapsible">
+              <h3>Update DB</h3>
+              <p>You need to be connected to the Internet before updating the Q & A database. Press the button below when ready.</p>
+              <a href="#" data-role="button" class="ui-btn ui-corner-all ui-btn-a ui-btn-icon-left ui-icon-arrow-d" id="updateBtn">Update Q & A Database</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="qanda-page" data-role="page">
+      <div data-role="header" data-position="fixed">
+        <a href="index.html" data-direction="reverse" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
+        <h1></h1>
+        <a href="#qabookmark" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-tag">Bookmarks</a>
+      </div> <!-- end of header -->
+      <div data-role="content"></div>
+      <div data-role="footer" data-position="fixed">
+        <a href="#shuffle-qanda" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-recycle">Shuffle</a>
+        <h1>Torts and Damages Q & A</h1>
+      </div><!-- end of footer -->
+
+      <div data-role="popup" id="shuffle-qanda" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="max-width:400px;">
+        <div data-role="header" data-theme="a">
+          <h1>Shuffle Q & A Items</h1>
+        </div>
+        <div role="main" class="ui-content">
+          <h3 class="ui-title">Are you sure you want to shuffle items?</h3>
+          <p>Shuffling Q & A items will reset your bookmarks. This action cannot be undone.</p>
+          <a href="#" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" id="cancelBtn">Cancel</a>
+          <a href="#" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" id="shuffleBtn">Shuffle</a>
+        </div>
+      </div>
+
+      <div data-role="popup" id="qabookmark" data-overlay-theme="b" data-theme="a" style="max-width:340px;">
+        <div data-role="header" data-theme="a">
+          <h1>Bookmark</h1>
+        </div>
+        <div data-role="content" class="ui-content">
+          <div class="ui-field-contain">
+            <label for="bmselect">Select Bookmark </label>
+            <select name="bmselect" id="bmselect" data-native-menu="false">
+              <option></option>
+              <option value="1">The 1st Option</option>
+              <option value="2">The 2nd Option</option>
+              <option value="3">The 3rd Option</option>
+              <option value="4">The 4th Option</option>
+            </select>
+          </div>
+        </div> 
+        <div class="ui-content">
+          <a href="#" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" id="bkcancelbtn">Cancel</a>
+          <a href="#" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" id="bkgopage">Go to Bookmark</a>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
+

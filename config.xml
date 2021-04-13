@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "legalquizzer.rvcrisostomo.jquerymobileapp"
+        versionCode = "1"
+        version     = "1.0.0" >
+
+<name>Legal Quizzer</name>
+<description>
+        Legal Quizzer for Torts and Damages
+</description>
+
+<author href="https://github.com/rvcris" email="rvcris@gmail.com">
+        Rene Crisostomo
+</author>
+
+<plugin name="cordova-plugin-whitelist" />
+<access origin="*" />
+</widget>

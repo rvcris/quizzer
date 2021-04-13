@@ -1,0 +1,26 @@
+.ui-li .ui-btn-text a.ui-link-inherit {
+	white-space: normal;
+}
+
+.listview-title {
+	padding-bottom: 10px;
+}
+
+.dw {
+	font-family: arial, verdana, sans-serif;
+	font-size: 12px;
+}
+
+.dww img {
+	width: 30px;
+	height: 30px;
+	margin: 5px 30px;
+}
+
+.ui-mobile #homeheader {
+	/*padding: 5px 10px 0; */
+	padding: 0;
+	text-align: center;  
+	margin: 0 auto; 
+}
+
